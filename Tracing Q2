@@ -1,0 +1,33 @@
+void Double(int);
+int Triple(int *);
+int Change(int *);
+
+void main() {
+    int Number = 5;
+    int Result = 8;
+    int Var = 2;
+    Double(Number);
+    Result = Triple(&Number);
+    Var = Change(&Number);
+    Double(Result);
+    Result = Triple(&Var);
+}
+
+void Double(int Var) {
+    Var *= 2;
+}
+
+int Triple(int *ptr) {
+    return (*ptr) * (*ptr) * (*ptr);
+}
+
+int Change(int *Num) {
+    static int Z = 5;
+    Z = Z + 3;
+    *Num = *Num + Z;
+    return *Num;
+}
+The output:
+Number = 13
+Var = 13
+Result = 2197
