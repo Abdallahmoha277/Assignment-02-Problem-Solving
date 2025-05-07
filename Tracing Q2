@@ -31,3 +31,7 @@ The output:
 Number = 13
 Var = 13
 Result = 2197
+The value of Result after statement 16 remains 2197.
+The value of the static variable Z in the Change function after statement 16 is 8.
+
+
